@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ChatService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7858/ChatService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7858/ChatService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7858/ChatService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:7858/ChatService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ImmaChatService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IChatService_user_exists_InputMessage">
+    <wsdl:part name="parameters" element="tns:user_exists" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_user_exists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:user_existsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_user_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:user_login" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_user_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:user_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_insert_userInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:insert_userInfo" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_insert_userInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insert_userInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_get_friends_InputMessage">
+    <wsdl:part name="parameters" element="tns:get_friends" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_get_friends_OutputMessage">
+    <wsdl:part name="parameters" element="tns:get_friendsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_userInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:load_userInfo" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_userInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:load_userInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_allUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:load_allUsers" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_allUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:load_allUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_messages_InputMessage">
+    <wsdl:part name="parameters" element="tns:load_messages" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_messages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:load_messagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_profileInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:load_profileInfo" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_load_profileInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:load_profileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_send_message_InputMessage">
+    <wsdl:part name="parameters" element="tns:send_message" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_send_message_OutputMessage">
+    <wsdl:part name="parameters" element="tns:send_messageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_send_friendRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:send_friendRequest" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_send_friendRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:send_friendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_accept_friendRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:accept_friendRequest" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_accept_friendRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:accept_friendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_reject_friendRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:reject_friendRequest" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_reject_friendRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reject_friendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_friend_status_InputMessage">
+    <wsdl:part name="parameters" element="tns:friend_status" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_friend_status_OutputMessage">
+    <wsdl:part name="parameters" element="tns:friend_statusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:logout" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_logged_in_InputMessage">
+    <wsdl:part name="parameters" element="tns:logged_in" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_logged_in_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logged_inResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_notify_request_InputMessage">
+    <wsdl:part name="parameters" element="tns:notify_request" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_notify_request_OutputMessage">
+    <wsdl:part name="parameters" element="tns:notify_requestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IChatService">
+    <wsdl:operation name="user_exists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/user_exists" message="tns:IChatService_user_exists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/user_existsResponse" message="tns:IChatService_user_exists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="user_login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/user_login" message="tns:IChatService_user_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/user_loginResponse" message="tns:IChatService_user_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_userInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/insert_userInfo" message="tns:IChatService_insert_userInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/insert_userInfoResponse" message="tns:IChatService_insert_userInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="get_friends">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/get_friends" message="tns:IChatService_get_friends_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/get_friendsResponse" message="tns:IChatService_get_friends_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="load_userInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/load_userInfo" message="tns:IChatService_load_userInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/load_userInfoResponse" message="tns:IChatService_load_userInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="load_allUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/load_allUsers" message="tns:IChatService_load_allUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/load_allUsersResponse" message="tns:IChatService_load_allUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="load_messages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/load_messages" message="tns:IChatService_load_messages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/load_messagesResponse" message="tns:IChatService_load_messages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="load_profileInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/load_profileInfo" message="tns:IChatService_load_profileInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/load_profileInfoResponse" message="tns:IChatService_load_profileInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="send_message">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/send_message" message="tns:IChatService_send_message_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/send_messageResponse" message="tns:IChatService_send_message_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="send_friendRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/send_friendRequest" message="tns:IChatService_send_friendRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/send_friendRequestResponse" message="tns:IChatService_send_friendRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="accept_friendRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/accept_friendRequest" message="tns:IChatService_accept_friendRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/accept_friendRequestResponse" message="tns:IChatService_accept_friendRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reject_friendRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/reject_friendRequest" message="tns:IChatService_reject_friendRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/reject_friendRequestResponse" message="tns:IChatService_reject_friendRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="friend_status">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/friend_status" message="tns:IChatService_friend_status_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/friend_statusResponse" message="tns:IChatService_friend_status_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/logout" message="tns:IChatService_logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/logoutResponse" message="tns:IChatService_logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logged_in">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/logged_in" message="tns:IChatService_logged_in_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/logged_inResponse" message="tns:IChatService_logged_in_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="notify_request">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/notify_request" message="tns:IChatService_notify_request_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/notify_requestResponse" message="tns:IChatService_notify_request_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IChatService" type="tns:IChatService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="user_exists">
+      <soap:operation soapAction="http://tempuri.org/IChatService/user_exists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="user_login">
+      <soap:operation soapAction="http://tempuri.org/IChatService/user_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_userInfo">
+      <soap:operation soapAction="http://tempuri.org/IChatService/insert_userInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_friends">
+      <soap:operation soapAction="http://tempuri.org/IChatService/get_friends" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load_userInfo">
+      <soap:operation soapAction="http://tempuri.org/IChatService/load_userInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load_allUsers">
+      <soap:operation soapAction="http://tempuri.org/IChatService/load_allUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load_messages">
+      <soap:operation soapAction="http://tempuri.org/IChatService/load_messages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="load_profileInfo">
+      <soap:operation soapAction="http://tempuri.org/IChatService/load_profileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_message">
+      <soap:operation soapAction="http://tempuri.org/IChatService/send_message" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="send_friendRequest">
+      <soap:operation soapAction="http://tempuri.org/IChatService/send_friendRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="accept_friendRequest">
+      <soap:operation soapAction="http://tempuri.org/IChatService/accept_friendRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reject_friendRequest">
+      <soap:operation soapAction="http://tempuri.org/IChatService/reject_friendRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="friend_status">
+      <soap:operation soapAction="http://tempuri.org/IChatService/friend_status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="http://tempuri.org/IChatService/logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logged_in">
+      <soap:operation soapAction="http://tempuri.org/IChatService/logged_in" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="notify_request">
+      <soap:operation soapAction="http://tempuri.org/IChatService/notify_request" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChatService">
+    <wsdl:port name="BasicHttpBinding_IChatService" binding="tns:BasicHttpBinding_IChatService">
+      <soap:address location="http://localhost:7858/ChatService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

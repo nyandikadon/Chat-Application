@@ -1,0 +1,5 @@
+c:\users\nyandika\documents\visual studio 2015\Projects\ImmaChatService\ImmaChatService\bin\ImmaChatService.dll.config
+c:\users\nyandika\documents\visual studio 2015\Projects\ImmaChatService\ImmaChatService\bin\ImmaChatService.dll
+c:\users\nyandika\documents\visual studio 2015\Projects\ImmaChatService\ImmaChatService\bin\ImmaChatService.pdb
+c:\users\nyandika\documents\visual studio 2015\Projects\ImmaChatService\ImmaChatService\obj\Debug\ImmaChatService.dll
+c:\users\nyandika\documents\visual studio 2015\Projects\ImmaChatService\ImmaChatService\obj\Debug\ImmaChatService.pdb

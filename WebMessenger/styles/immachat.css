@@ -1,0 +1,182 @@
+﻿body
+{
+    font-family: Microsoft Sans-Serif !important;
+}
+.login
+{
+    width: 35%;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: 15%;
+}
+.div_header
+{
+    margin-top: 2%;
+    height: 8%;
+    width: 1069px;
+}
+.InformationCss
+{
+    color: Red;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px -webkit-border-radius: 5px;
+    -border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 5px;
+    margin-left: auto;
+    font-size: 11pt;
+    margin-right: auto;
+    font-family: Verdana;
+    text-align: left;
+    background-repeat: no-repeat;
+    width: 90%;
+    background-image: -webkit-gradient(linear, left bottom,left top, from(white),color-stop(25%,#4670BD),to(white));
+}
+.info_success
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('../Images/success.png');
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px -webkit-border-radius: 5px;
+    -border-radius: 5px;
+    border: 1px solid Green;
+    padding: 5px;
+    margin-left: auto;
+    font-size: 10pt;
+    margin-right: auto;
+    font-family: Verdana;
+    text-align: center;
+    background-repeat: no-repeat;
+    visibility: visible;
+    position: relative;
+    width: 99%;
+    top: 5px;
+    height: 40px;
+    z-index: 200001;
+}
+
+.info_warning
+{
+    color: red;
+    background-color: #FEEFB3;
+    background-image: url('../Images/warning.png');
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px -webkit-border-radius: 5px;
+    -border-radius: 5px;
+    border: 1px solid red;
+    padding: 5px;
+    font-size: 10pt;
+    font-family: Verdana;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    text-align: center;
+    visibility: visible;
+    position: relative;
+    width: 99%;
+    top: 5px;
+    height: 40px;
+    z-index: 200001;
+}
+.info_info
+{
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px -webkit-border-radius: 5px;
+    -border-radius: 5px;
+    border: 1px solid Navy;
+    padding: 5px;
+    margin-left: auto;
+    font-size: 10pt;
+    margin-right: auto;
+    font-family: Verdana;
+    color: Blue;
+    background-color: #fff;
+    background-image: url('../Images/info.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    visibility: visible;
+    position: relative;
+    width: 99%;
+    top: 5px;
+    z-index: 200001;
+}
+.info_hidden
+{
+    visibility: hidden;
+}
+.grid_main
+{
+    height: 250px;
+    overflow: auto;
+    z-index: 1;
+}
+.override_RadMenu
+{
+    z-index: 100 !important;
+}
+/*combobox itemtemplates css*/
+.colsmall
+{
+    padding: 0 1px 0 0;
+    width: 45px;
+    line-height: 14px;
+    float: left;
+    list-style-type: none;
+}
+.colMedium
+{
+    padding: 0 1px 0 0;
+    width: 70px;
+    line-height: 14px;
+    float: left;
+    list-style-type: none;
+}
+.colBig
+{
+    padding: 0 2px 0 0;
+    width: 130px;
+    line-height: 14px;
+    float: left;
+    list-style-type: none;
+}
+.results
+{
+    display: block;
+    margin-top: 20px;
+}
+.panel_main
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.panel_mid
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contents_width
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #CCC;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -border-radius: 8px;
+    background: rgb(252,252,192);
+    padding: 2px 0px 0px 3px;
+}
+.rounded_panel
+{
+    
+    border: 1px solid #CCC;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -border-radius: 8px;
+    
+}

@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="webchat.master.cs" Inherits="webchat" %>
+
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Web Chat</title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 322px;
+        }
+
+        .auto-style3 {
+            width: 70%;
+        }
+
+        #frm_webchat {
+            width: 1075px;
+        }
+    </style>
+    <div class="div_header">
+        <div id="Information_Bar" runat="server" class="info_hidden" style="z-index: 200001;">
+        </div>
+        <h2 style="text-align: center; text-decoration: underline; width: 794px;">WEB CHAT MESSENGER</h2>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <link href="styles/immachat.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="windowfiles/dhtmlwindow.css" type="text/css" />
+    <link rel="stylesheet" href="modalfiles/modal.css" type="text/css" />
+</head>
+<body>
+    <form id="frm_webchat" runat="server">
+        <telerik:radscriptmanager id="RadScriptManager1" runat="server" asyncpostbacktimeout="600">
+        </telerik:radscriptmanager>
+        <telerik:radajaxmanager id="ajax_manager" runat="server">
+            <AjaxSettings>
+                <telerik:AjaxSetting AjaxControlID="btn_new">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="ajaxified_panel" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="btn_edit">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="ajaxified_panel" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>                
+            </AjaxSettings>
+        </telerik:radajaxmanager>
+        <div>
+            <table style="width: 76%">
+                <tr>
+                    <td class="auto-style1">
+                        <asp:SiteMapPath ID="mappath" runat="server" PathDirection="RootToCurrent" PathSeparator="|">
+                        </asp:SiteMapPath>
+                    </td>
+                    <td>HELLO 
+                    <asp:Literal ID="lbl_first_name" runat="server"></asp:Literal>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btn_logout" Text="Log Off" OnClick="btn_logout_Click" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <asp:Panel ID="ajaxified_panel" runat="server" Width="629px">
+                <table style="width: 50%;">
+                    <tr>
+                        <td class="auto-style3">
+                            <div>
+                                <telerik:radmenu id="webchat_menu" runat="server" skin="Hay" cssclass="override_RadMenu"
+                                    font-names="Microsoft Sans Serif">
+                                </telerik:radmenu>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style3">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="margin-left: auto; margin-right: auto" class="auto-style3">
+                            <asp:ContentPlaceHolder ID="main_content" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style3">
+                            <br />
+                            <div style="width: 21%; margin-left: auto; margin-right: auto; text-align: center">
+                                <asp:Panel ID="panel_controls" runat="server">
+                                    <asp:Button ID="btn_new" runat="server" OnClick="btn_new_Click" Text="Add friend" />
+                                </asp:Panel>
+                            </div>
+                            <br />
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+        </div>
+    </form>
+</body>
+</html>

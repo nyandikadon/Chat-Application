@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/pages/index.aspx" title="WebChat Menu"  description="Navigate through the web messenger">
+    <siteMapNode url="~/pages/home.aspx" title="Home page"  description="central page for the user" />
+    <siteMapNode url="~/pages/sign_up.aspx" title="Sign up page"  description="Page for registration of new users" />
+    <siteMapNode url="~/pages/messages.aspx" title="Messages"  description="View messages" />
+    <siteMapNode url="~/pages/profile.aspx" title="Profile"  description="View profile" />
+    <siteMapNode url="~/pages/users.aspx" title="Find friends"  description="Look up all users" />
+  </siteMapNode>
+</siteMap>
